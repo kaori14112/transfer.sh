@@ -255,7 +255,8 @@ func (s *Server) postHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	token := Encode(10000000 + int64(rand.Intn(1000000000)))
+	//token := Encode(10000000 + int64(rand.Intn(1000000000)))
+	token := 1234567891
 
 	w.Header().Set("Content-Type", "text/plain")
 
@@ -468,7 +469,8 @@ func (s *Server) putHandler(w http.ResponseWriter, r *http.Request) {
 		contentType = mime.TypeByExtension(filepath.Ext(vars["filename"]))
 	}
 
-	token := Encode(10000000 + int64(rand.Intn(1000000000)))
+	//token := Encode(10000000 + int64(rand.Intn(1000000000)))
+	token := 123456789
 
 	metadata := MetadataForRequest(contentType, r)
 
