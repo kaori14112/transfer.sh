@@ -341,9 +341,6 @@ func (s *Server) postHandler(w http.ResponseWriter, r *http.Request) {
 			//relativeURL, _ := url.Parse(path.Join(s.proxyPath, token, filename))
 			relativeURL, _ := url.Parse(path.Join(s.proxyPath, filename))
 			fmt.Fprintln(w, getURL(r, s.proxyPort).ResolveReference(relativeURL).String())
-			//fmt.Fprintln("001: ", s.proxyPath)
-			//fmt.Fprintln("002: ", token)
-			//fmt.Fprintln("003: ", filename)
 
 			cleanTmpFile(file)
 		}
