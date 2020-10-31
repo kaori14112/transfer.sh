@@ -255,8 +255,8 @@ func (s *Server) postHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	//token := Encode(10000000 + int64(rand.Intn(1000000000)))
-	token := 1234567891
+	token := Encode(10000000 + int64(rand.Intn(1000000000)))
+	//token := 1234567891
 
 	w.Header().Set("Content-Type", "text/plain")
 
